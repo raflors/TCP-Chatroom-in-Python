@@ -1,19 +1,28 @@
-# TCP-Chatroom-in-Python
-Simple TCP chat room using Python
+# Introduction
 
-Python Multi-person Internet Chat Room
-A small chat room program written in Python 3, that allows multiple people to instant messaging over the internet.
+In this simple program, I implemented a simple fully-functioning TCP chat room with GUI using Python and Tkinter. It has one server that hosts the chat and multiple
+clients that connect to it and communicate with each other.
 
-Usage
+This is a very basic program that I made for CS50 as my final project and which will be updated when I can. In the near future, I will include banning, kicking and file transfering.
+But for now, let's all stick to the simplicity of this program.
 
-Run server.py on the machine you wish to act as the server, entering the desired port you wish to run the server on. You can run multiple independent servers, however they must be running on different ports.
-Any clients can now connect to the server by running client.py then entering the IP and port the server is running on (as seen in the server terminal). Clients can choose a username and then send messages by entering them into the Python terminal. Messages from other clients will be printed to the Python terminal.
+## How to run the program
 
-Know Issues
+Run the ```bash server.py``` from the command line
 
-While using the program as a client, if you are typing a message and receive one at the same time, you may experience some errors with the received message interrupting the message you are typing. Unfortunately, this is unfixable currently due to Python 3 having issues with printing and accepting user input at the same time.
+Input usage: ```python3 server.py <host> [-p PORT]```
+    host: Can be a hostname, or an IP address.
+    -p port: TCP port the server listens at (default 1060)
 
-Requirements
-Python 3
-Socket Module (standard library)
-Threading Module (standard library)
+    e.g.
+    ```bash $ python3 server.py 127.0.0.1
+            Listening at ('127.0.0.1', 1060)```
+
+Run the ```bash client.py``` in separate terminal window, just like running the server.py
+
+Run another multiple terminals and run ```bash client.py``` and chat real time. A Tkinter GUI will pop up!
+
+
+## Future updates
+
+Kicking, Banning and file transfer will be added when I can! So feel free to check out my [pip](https://github.com/raflors) for updates!
